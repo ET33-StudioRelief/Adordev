@@ -1,7 +1,12 @@
-import { greetUser } from '$utils/greet';
+import './index.css';
+
+import { initFadeInFeaturesItem } from 'src/typescript/fadeInFeaturesItem';
+import { initFadeInSection } from 'src/typescript/fadeInSection';
+import { initParallaxImage } from 'src/typescript/parallaxImage';
 
 window.Webflow ||= [];
 window.Webflow.push(() => {
-  const name = 'John Doe';
-  greetUser(name);
+  initFadeInSection();
+  initFadeInFeaturesItem();
+  initParallaxImage();
 });
